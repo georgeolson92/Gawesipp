@@ -1,0 +1,23 @@
+<h1>{{model.title}}</h1>
+<h3>
+{{#each model.categories as |category|}}
+  <span class="category"> {{category}}</span> / /
+{{/each}}
+</h3>
+<h4>by {{model.author}} </h4>
+<h5>LOCATION: {{model.city}} <em>{{model.minutesToRead}}-minute read</em></h5>
+<h2>{{model.header}}</h2>
+{{#each model.paragraph_content as |paragraph|}}
+  <p>{{paragraph}}</p>
+{{/each}}
+  <blockquote>"{{model.quote}}" --- {{model.quote_person}}</blockquote>
+  <img src="{{model.image}}">
+<hr>
+<h3>Tags:</h3>
+<p>
+{{#each model.tags as |tag|}}
+<span class="tag">{{tag}}</span>
+{{/each}}
+</p>
+<hr>
+{{#link-to 'index'}}GO HOME{{/link-to}}

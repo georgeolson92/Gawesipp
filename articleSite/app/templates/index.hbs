@@ -1,0 +1,12 @@
+<h1>Gawesipp</h1>
+<h3>Your number one source for e'rything.</h3>
+
+<p>Welcome to Gawesipp.</p>
+
+<ul>
+  {{#each model as |article|}}
+    {{article-tile article=article}}
+  {{/each}}
+</ul>
+
+{{#link-to 'about'}}About{{/link-to}}
